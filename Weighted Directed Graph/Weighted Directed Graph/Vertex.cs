@@ -4,7 +4,15 @@ using System.Text;
 
 namespace Weighted_Directed_Graph
 {
-    class Vertex
+    public class Vertex<T>
     {
+        public T Value;
+        public List<Edge<T>> Neighbors;
+
+        public Vertex(T value)
+        {
+            this.Value = value;
+        }
+         
     }
 }

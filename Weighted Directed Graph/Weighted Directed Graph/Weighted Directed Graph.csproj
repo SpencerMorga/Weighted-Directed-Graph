@@ -6,4 +6,8 @@
     <RootNamespace>Weighted_Directed_Graph</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
+
 </Project>
