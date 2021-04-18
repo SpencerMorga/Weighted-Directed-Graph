@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "\\\\GMRDC1\\Folder Redirection\\spencer.morga\\Documents\\Visual Studio 2019\\Projects\\Weighted Directed Graph\\Weighted Directed Graph\\Weighted Directed Graph.csproj",
+      "projectUniqueName": "\\\\GMRDC1\\Folder Redirection\\spencer.morga\\Documents\\Github\\Weighted-Directed-Graph\\Weighted Directed Graph\\Weighted Directed Graph\\Weighted Directed Graph.csproj",
       "projectName": "Weighted Directed Graph",
-      "projectPath": "\\\\GMRDC1\\Folder Redirection\\spencer.morga\\Documents\\Visual Studio 2019\\Projects\\Weighted Directed Graph\\Weighted Directed Graph\\Weighted Directed Graph.csproj",
+      "projectPath": "\\\\GMRDC1\\Folder Redirection\\spencer.morga\\Documents\\Github\\Weighted-Directed-Graph\\Weighted Directed Graph\\Weighted Directed Graph\\Weighted Directed Graph.csproj",
       "packagesPath": "C:\\Users\\spencer.morga\\.nuget\\packages\\",
-      "outputPath": "\\\\GMRDC1\\Folder Redirection\\spencer.morga\\Documents\\Visual Studio 2019\\Projects\\Weighted Directed Graph\\Weighted Directed Graph\\obj\\",
+      "outputPath": "\\\\GMRDC1\\Folder Redirection\\spencer.morga\\Documents\\Github\\Weighted-Directed-Graph\\Weighted Directed Graph\\Weighted Directed Graph\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
