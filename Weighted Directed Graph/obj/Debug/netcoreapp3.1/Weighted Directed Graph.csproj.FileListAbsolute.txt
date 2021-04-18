@@ -1,0 +1,13 @@
+\\GMRDC1\Folder Redirection\spencer.morga\Documents\Visual Studio 2019\Projects\Weighted Directed Graph\Weighted Directed Graph\bin\Debug\netcoreapp3.1\Weighted Directed Graph.exe
+\\GMRDC1\Folder Redirection\spencer.morga\Documents\Visual Studio 2019\Projects\Weighted Directed Graph\Weighted Directed Graph\bin\Debug\netcoreapp3.1\Weighted Directed Graph.deps.json
+\\GMRDC1\Folder Redirection\spencer.morga\Documents\Visual Studio 2019\Projects\Weighted Directed Graph\Weighted Directed Graph\bin\Debug\netcoreapp3.1\Weighted Directed Graph.runtimeconfig.json
+\\GMRDC1\Folder Redirection\spencer.morga\Documents\Visual Studio 2019\Projects\Weighted Directed Graph\Weighted Directed Graph\bin\Debug\netcoreapp3.1\Weighted Directed Graph.runtimeconfig.dev.json
+\\GMRDC1\Folder Redirection\spencer.morga\Documents\Visual Studio 2019\Projects\Weighted Directed Graph\Weighted Directed Graph\bin\Debug\netcoreapp3.1\Weighted Directed Graph.dll
+\\GMRDC1\Folder Redirection\spencer.morga\Documents\Visual Studio 2019\Projects\Weighted Directed Graph\Weighted Directed Graph\bin\Debug\netcoreapp3.1\Weighted Directed Graph.pdb
+\\GMRDC1\Folder Redirection\spencer.morga\Documents\Visual Studio 2019\Projects\Weighted Directed Graph\Weighted Directed Graph\obj\Debug\netcoreapp3.1\Weighted Directed Graph.csprojAssemblyReference.cache
+\\GMRDC1\Folder Redirection\spencer.morga\Documents\Visual Studio 2019\Projects\Weighted Directed Graph\Weighted Directed Graph\obj\Debug\netcoreapp3.1\Weighted Directed Graph.AssemblyInfoInputs.cache
+\\GMRDC1\Folder Redirection\spencer.morga\Documents\Visual Studio 2019\Projects\Weighted Directed Graph\Weighted Directed Graph\obj\Debug\netcoreapp3.1\Weighted Directed Graph.AssemblyInfo.cs
+\\GMRDC1\Folder Redirection\spencer.morga\Documents\Visual Studio 2019\Projects\Weighted Directed Graph\Weighted Directed Graph\obj\Debug\netcoreapp3.1\Weighted Directed Graph.csproj.CoreCompileInputs.cache
+\\GMRDC1\Folder Redirection\spencer.morga\Documents\Visual Studio 2019\Projects\Weighted Directed Graph\Weighted Directed Graph\obj\Debug\netcoreapp3.1\Weighted Directed Graph.dll
+\\GMRDC1\Folder Redirection\spencer.morga\Documents\Visual Studio 2019\Projects\Weighted Directed Graph\Weighted Directed Graph\obj\Debug\netcoreapp3.1\Weighted Directed Graph.pdb
+\\GMRDC1\Folder Redirection\spencer.morga\Documents\Visual Studio 2019\Projects\Weighted Directed Graph\Weighted Directed Graph\obj\Debug\netcoreapp3.1\Weighted Directed Graph.genruntimeconfig.cache
