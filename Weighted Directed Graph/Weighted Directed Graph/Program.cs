@@ -29,6 +29,10 @@ namespace Weighted_Directed_Graph
             graph.AddVertex(5);
             graph.AddVertex(6);
             graph.RemoveVertex(6);
+            graph.AddVertex(7);
+            graph.AddEdge(5, 7, 1);
+            graph.RemoveVertex(5);
+            ;
 
             ////List<int> list = new List<int>() { 2, 1, 23, -123, 0 };
             ////var result = list.Where(x => x > 1).ToList();

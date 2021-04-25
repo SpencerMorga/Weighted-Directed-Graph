@@ -40,7 +40,7 @@ namespace Weighted_Directed_Graph
         public bool AddVertex(Vertex<T> vertex)
         {
             var result = verticies.Where(item => item.Value.Equals(vertex.Value)).ToList();
-            if (vertex != null && vertex.Neighbors == null)
+            if (vertex != null && vertex.Neighbors.Count == 0)
             {
                 if (result.Count == 0)
                 {
@@ -72,6 +72,11 @@ namespace Weighted_Directed_Graph
                         if (vertex.Neighbors[i].EndingPoint == vertex)
                         {
                             RemoveEdge(vertex.Neighbors[i].StartingPoint, vertex);
+                            
+                        }
+                        else
+                        {
+                            RemoveEdge(vertex, vertex.Neighbors[i].EndingPoint);
                         }
                     }
                 }
@@ -79,12 +84,42 @@ namespace Weighted_Directed_Graph
             }
         }
 
-        //public bool AddEdge(Vertex<T> vertexA, Vertex<T> vertexB, double distance)
-        //{
+        public void AddEdge(T valueA, T valueB, double distance)
+        {
+            Vertex<T> vertexA = Search(valueA);
+            Vertex<T> vertexB = Search(valueB);
+            AddEdge(vertexA, vertexB, distance);
+        }
+        private bool AddEdge(Vertex<T> vertexA, Vertex<T> vertexB, double distance)
+        {
+            if (verticies.Contains(vertexA) && verticies.Contains(vertexB) && vertexA != null && vertexB != null)
+            {
+                var result = vertexA.Neighbors.Where(item => item.EndingPoint == vertexB).ToList();
+                if (result.Count == 0)
+                {
+                    Edge<T> newedge = new Edge<T>(distance, vertexA, vertexB);
+                    vertexA.Neighbors.Add(newedge);
+                    vertexB.Neighbors.Add(newedge);
+                    return true;
 
-        //}
+                }
+                    //var testFind = myList.Where(item => item.Name == "Bob").First();
+            }
+            return false;
+        }
 
-        public bool RemoveEdge(Vertex<T> vertexA, Vertex<T> vertexB)
+        public bool RemoveEdge(T valueA, T valueB)
+        {
+            Vertex<T> vertexA = Search(valueA);
+            Vertex<T> vertexB = Search(valueB);
+            if (vertexA != null && vertexB != null)
+            {
+                RemoveEdge(vertexA, vertexB);
+                return true;
+            }
+            return false;
+        }
+        private bool RemoveEdge(Vertex<T> vertexA, Vertex<T> vertexB)
         {
             if (verticies.Contains(vertexA) && verticies.Contains(vertexB))
             {
@@ -92,7 +127,9 @@ namespace Weighted_Directed_Graph
                 {
                     if (vertexA.Neighbors[i].EndingPoint == vertexB)
                     {
+                        vertexB.Neighbors.Remove(vertexA.Neighbors[i]);
                         vertexA.Neighbors.Remove(vertexA.Neighbors[i]);
+                        
                         return true;
                     }
                 }
@@ -118,11 +155,63 @@ namespace Weighted_Directed_Graph
             }
             return null;*/
         }
+        public Edge<T> GetEdge(T valueA, T valueB)
+        {
+            Vertex<T> vertexA = Search(valueA);
+            Vertex<T> vertexB = Search(valueB);
+            return GetEdge(vertexA, vertexB);
+        }
+        private Edge<T> GetEdge(Vertex<T> vertexA, Vertex<T> vertexB)
+        {
+            if (vertexA != null && vertexB != null)
+            {
+                for (int i = 0; i < vertexA.Neighbors.Count; i++)
+                {
+                    if (vertexA.Neighbors[i].EndingPoint == vertexB)
+                    {
+                        return vertexA.Neighbors[i];
+                    }
+                }
+            }
+            return null;
+        }
 
-        //public Edge<T> GetEdge(Vertex<T> vertexA, Vertex<T> vertexB)
-        //{
+        public List<Vertex<T>> BreadthFirstSearch(T valueA, T valueB)
+        {
+            Dictionary<Vertex<T>, Vertex<T>> dictionary = new Dictionary<Vertex<T>, Vertex<T>>();
+            List<Vertex<T>> path = new List<Vertex<T>>();
+            for (int i = 0; i < verticies.Count; i++)
+            {
+                verticies[i].isVisited = false;
+            }
+            Queue<Vertex<T>> queue = new Queue<Vertex<T>>();
+            Vertex<T> vertexA = Search(valueA);
+            Vertex<T> vertexB = Search(valueB);
 
-        //}
+            Vertex<T> current = vertexA;
+            queue.Enqueue(current);
+            while (queue.Count != 0)
+            {
+                current = queue.Dequeue();
+     
+                if (current.Equals(valueB))
+                {
+
+                }
+                for (int i = 0; i < current.Neighbors.Count; i++)
+                {
+                    if (current.Neighbors[i].EndingPoint != current && current.Neighbors[i].EndingPoint.isVisited == false)
+                    {
+                        queue.Enqueue(current.Neighbors[i].EndingPoint);
+                        dictionary.Add(current.Neighbors[i].EndingPoint, current);
+                        current.Neighbors[i].EndingPoint.isVisited = true;
+
+                    }
+                }
+
+                
+            }
+        }
     }
 
 

@@ -8,10 +8,12 @@ namespace Weighted_Directed_Graph
     {
         public T Value;
         public List<Edge<T>> Neighbors;
+        public bool isVisited;
 
         public Vertex(T value)
         {
             this.Value = value;
+            Neighbors = new List<Edge<T>>();
         }
          
     }
