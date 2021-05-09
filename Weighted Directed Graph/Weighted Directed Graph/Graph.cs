@@ -99,7 +99,7 @@ namespace Weighted_Directed_Graph
                 {
                     Edge<T> newedge = new Edge<T>(distance, vertexA, vertexB);
                     vertexA.Neighbors.Add(newedge);
-                    vertexB.Neighbors.Add(newedge);
+                    //vertexB.Neighbors.Add(newedge);
                     return true;
 
                 }
@@ -127,7 +127,7 @@ namespace Weighted_Directed_Graph
                 {
                     if (vertexA.Neighbors[i].EndingPoint == vertexB)
                     {
-                        vertexB.Neighbors.Remove(vertexA.Neighbors[i]);
+                        //vertexB.Neighbors.Remove(vertexA.Neighbors[i]);
                         vertexA.Neighbors.Remove(vertexA.Neighbors[i]);
                         
                         return true;
@@ -194,8 +194,18 @@ namespace Weighted_Directed_Graph
             {
                 current = queue.Dequeue();
      
-                if (current.Equals(valueB))
+                if (current.Equals(vertexB))
                 {
+                    // make and add to path list
+
+                    while (current !=  vertexA)
+                    {
+                        path.Add(current);
+                        Vertex<T> parent = dictionary[current];
+                        current = parent;
+                    }
+                    path.Add(vertexA);
+                    path.Reverse();
 
                 }
                 for (int i = 0; i < current.Neighbors.Count; i++)
@@ -203,14 +213,17 @@ namespace Weighted_Directed_Graph
                     if (current.Neighbors[i].EndingPoint != current && current.Neighbors[i].EndingPoint.isVisited == false)
                     {
                         queue.Enqueue(current.Neighbors[i].EndingPoint);
-                        dictionary.Add(current.Neighbors[i].EndingPoint, current);
+                        dictionary.Add(current.Neighbors[i].EndingPoint, current); // key is current, value is parent
                         current.Neighbors[i].EndingPoint.isVisited = true;
-
                     }
                 }
-
+            }
+            if (path.Count == 0)
+            {
+                throw new Exception("no connection found");
                 
             }
+            return path;
         }
     }
 

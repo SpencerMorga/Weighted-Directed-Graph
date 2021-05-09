@@ -26,12 +26,28 @@ namespace Weighted_Directed_Graph
 
             Graph<int> graph = new Graph<int>();
 
+            graph.AddVertex(1);
+            graph.AddVertex(2);
+            graph.AddVertex(3);
+            graph.AddVertex(4);
             graph.AddVertex(5);
             graph.AddVertex(6);
-            graph.RemoveVertex(6);
             graph.AddVertex(7);
-            graph.AddEdge(5, 7, 1);
-            graph.RemoveVertex(5);
+            graph.AddVertex(8);
+            graph.AddVertex(9);
+            graph.AddVertex(10);
+            graph.AddEdge(1, 2, 5);
+            //graph.AddEdge(2, 4, 5);
+            graph.AddEdge(4, 9, 5);
+            graph.AddEdge(4, 5, 5);
+            graph.AddEdge(5, 6, 5);
+            graph.AddEdge(5, 7, 5);
+            graph.AddEdge(7, 5, 5);
+            graph.AddEdge(7, 3, 5);
+            graph.AddEdge(2, 8, 5);
+            graph.AddEdge(8, 7, 5);
+            var list = graph.BreadthFirstSearch(1, 10);
+
             ;
 
             ////List<int> list = new List<int>() { 2, 1, 23, -123, 0 };
