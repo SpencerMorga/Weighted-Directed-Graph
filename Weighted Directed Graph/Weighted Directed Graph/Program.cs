@@ -50,6 +50,9 @@ namespace Weighted_Directed_Graph
 
             ;
 
+            Comparer<(Vertex<int>, double)> c = Comparer<(Vertex<int>, double)>.Create((x,y)=> x.Item2.CompareTo(y.Item2));
+
+
             ////List<int> list = new List<int>() { 2, 1, 23, -123, 0 };
             ////var result = list.Where(x => x > 1).ToList();
             //List<Test> myList = new List<Test>();
