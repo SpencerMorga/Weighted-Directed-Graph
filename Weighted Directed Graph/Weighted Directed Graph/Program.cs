@@ -36,17 +36,24 @@ namespace Weighted_Directed_Graph
             graph.AddVertex(8);
             graph.AddVertex(9);
             graph.AddVertex(10);
-            graph.AddEdge(1, 2, 5);
+            graph.AddVertex(11);
+            graph.AddEdge(1, 2, 6);
             //graph.AddEdge(2, 4, 5);
+            graph.AddEdge(4, 5, 9);
             graph.AddEdge(4, 9, 5);
-            graph.AddEdge(4, 5, 5);
-            graph.AddEdge(5, 6, 5);
-            graph.AddEdge(5, 7, 5);
+            graph.AddEdge(5, 6, 7);
+            graph.AddEdge(5, 7, 2);
             graph.AddEdge(7, 5, 5);
-            graph.AddEdge(7, 3, 5);
-            graph.AddEdge(2, 8, 5);
-            graph.AddEdge(8, 7, 5);
-            var list = graph.BreadthFirstSearch(1, 10);
+            graph.AddEdge(7, 3, 8);
+            graph.AddEdge(2, 8, 13);
+            graph.AddEdge(8, 7, 3);
+            graph.AddEdge(2, 4, 1);
+            graph.AddEdge(9, 10, 1);
+            graph.AddEdge(10, 7, 1);
+            graph.AddEdge(4, 3, 1);
+            graph.AddEdge(3, 5, 2);
+
+            List<Vertex<int>> list = Dijkstra<int>.Dijkstra2(6, 1, graph);
 
             ;
 
