@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text.Json;
 
 namespace Weighted_Directed_Graph
 {
@@ -10,6 +12,10 @@ namespace Weighted_Directed_Graph
         public int X { get; set; }
         public int Y { get; set; }
         public string Name { get; set; }
+        public Test()
+        {
+
+        }
         public Test(int x, int y, string name)
         {
             X = x;
@@ -17,6 +23,19 @@ namespace Weighted_Directed_Graph
             Name = name;
         }
     }
+
+    class AirportEdges
+    { 
+        public string Start { get; set; }
+        public string End { get; set; }
+        public double Distance { get; set; }
+        public AirportEdges()
+        {
+
+        }
+    
+    }
+    
     class Program
     {
 
@@ -53,13 +72,48 @@ namespace Weighted_Directed_Graph
             graph.AddEdge(4, 3, 1);
             graph.AddEdge(3, 5, 2);
 
-            List<Vertex<int>> list = Dijkstra<int>.Dijkstra2(6, 1, graph);
+           // List<Vertex<int>> list = Dijkstra<int>.Dijkstra2(6, 1, graph);
 
             ;
 
             Comparer<(Vertex<int>, double)> c = Comparer<(Vertex<int>, double)>.Create((x,y)=> x.Item2.CompareTo(y.Item2));
 
+            Test t = new Test(5,10,"Test");
 
+            List<Test> list = new List<Test>()
+            {
+                new Test(1,2,"abcd"),
+                new Test(4,12,"a")
+            };
+            string s = JsonSerializer.Serialize<List<Test>>(list);
+            var Result = JsonSerializer.Deserialize<List<Test>>(s);
+
+            ;
+
+            string vertices = File.ReadAllText("AirportProblemVerticies.txt");
+
+            List<string> verticieslist = JsonSerializer.Deserialize<List<string>>(vertices);
+
+            Graph<string> graph2 = new Graph<string>();
+
+            for (int i = 0; i < verticieslist.Count; i++)
+            {
+                graph2.AddVertex(verticieslist[i]);
+            }
+
+
+
+            string edges = File.ReadAllText("AirportProblemEdges.txt");
+
+            List<AirportEdges> edgeslist = JsonSerializer.Deserialize<List<AirportEdges>>(edges);
+
+            for (int i = 0; i < edgeslist.Count; i++)
+            {
+                graph2.AddEdge(edgeslist[i].Start, edgeslist[i].End, edgeslist[i].Distance);
+            }
+
+            List<Vertex<string>> path = Dijkstra<string>.Dijkstra2("LAX", "SEA", graph2);
+            ;
             ////List<int> list = new List<int>() { 2, 1, 23, -123, 0 };
             ////var result = list.Where(x => x > 1).ToList();
             //List<Test> myList = new List<Test>();

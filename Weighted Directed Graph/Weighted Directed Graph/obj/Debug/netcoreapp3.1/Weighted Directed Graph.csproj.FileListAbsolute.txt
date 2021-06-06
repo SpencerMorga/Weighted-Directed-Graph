@@ -24,3 +24,5 @@
 \\GMRDC1\Folder Redirection\spencer.morga\Documents\Github\Weighted-Directed-Graph\Weighted Directed Graph\Weighted Directed Graph\obj\Debug\netcoreapp3.1\Weighted Directed Graph.dll
 \\GMRDC1\Folder Redirection\spencer.morga\Documents\Github\Weighted-Directed-Graph\Weighted Directed Graph\Weighted Directed Graph\obj\Debug\netcoreapp3.1\Weighted Directed Graph.pdb
 \\GMRDC1\Folder Redirection\spencer.morga\Documents\Github\Weighted-Directed-Graph\Weighted Directed Graph\Weighted Directed Graph\obj\Debug\netcoreapp3.1\Weighted Directed Graph.genruntimeconfig.cache
+\\GMRDC1\Folder Redirection\spencer.morga\Documents\Github\Weighted-Directed-Graph\Weighted Directed Graph\Weighted Directed Graph\bin\Debug\netcoreapp3.1\AirportProblemEdges.txt
+\\GMRDC1\Folder Redirection\spencer.morga\Documents\Github\Weighted-Directed-Graph\Weighted Directed Graph\Weighted Directed Graph\bin\Debug\netcoreapp3.1\AirportProblemVerticies.txt
